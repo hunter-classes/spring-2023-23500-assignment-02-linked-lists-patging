@@ -1,0 +1,113 @@
+* Project 2 Link lists
+
+* Part 1 Due: Thursday March 2, before class
+* Part 2 Due: Monday March 13, 7:00am
+
+NOTE: There will be another ongoing assignment starting before the
+part 2 due date so don't leave this one until the last minute. 
+
+
+* Part 1 - Due 3/2 before class
+
+** *Important Note*
+This part will not be graded for correctness, only for the attempt so
+it while it is important that you submit your code before the due
+date, this part doesn't need to fully work by the part 1 due date.
+
+** These videos review some of what we've already covered in class
+- https://youtu.be/mSQjWDAQx-o
+- https://youtu.be/Nj-hc0LvYjU
+- https://youtu.be/XRGqxNdNLAE
+
+** Add the code for a basic linked list it should include:
+- Node.h and Node.cpp as specified in class and covered in the third video
+- List.h and List.cpp as specified in class and covered in the third video
+- A main.cpp that can create a sample list
+- A Makefile that will build an executable named *main*.
+
+
+Try to build a small list and experiment with the data structure
+
+** Try to add the three routines specified in the video:
+1. contains(std::string item) which returns true if item is in the list and
+   false otherwise.
+2. remove(int loc) which will remove an item at the specified locaton
+3. A destructor
+
+We will go over these in class on March 2nd
+
+** IMPORTANT NOTE
+
+For this part of the assignment it is important go upload your best
+attempt before class. This part will *not* be graded for correctness
+but rather for attempt. It doesn't have to work (for now) but the
+attempt must be there.
+
+
+* Part 2 
+** Description / specification
+You can use any of the linked list code that you either wrote for part
+1 of we wrote in class as starter code.
+
+Create a new class called OList (use the file names OList.cpp and
+OList.h) . This should be based on your/our existing list code. The
+difference is that this list should store items in increasing
+order. You can leave the data type as std::string or change it to int -
+whichever you prefer.
+
+You should implement the following routines:
+
+1. A constructor
+2. A destructor
+3. void insert(value) - insert a new node with *value* into the list
+   in its proper location.
+4. std::string toString() - return a string representation of the full
+   list.
+5. bool contains(value) - returns true if value is in the list, false
+   otherwise.
+6. get(loc) - returns the value at loc
+7. void remove(loc) - returns the value at loc
+8. void reverse() - This should "reverse" the list - that is reverse
+   the pointers.
+
+   If the list starts like this:
+
+   #+begin_example
+   head --> 5 --> 6 --> 10 --> 18 --> nullptr
+   #+end_example
+
+   after reverse it should look like this:
+
+   #+begin_example
+   head --> 18 --> 10 --> 6 --> 5 --> nullptr
+   #+end_example
+
+   *THIS WILL RESULT IN YOUR OTHER ROUTINES NO LONGER WORKING SINCE
+   THE LIST WON'T BE IN ORDER ANYMORE* - this is okay - just test this
+   at the end or run it, test it, then run it again.
+
+   You should do this by rearranging the pointers, not be copying
+   values or deleting and re-entering nodes. This is a typical
+   interview question so it's good to work on doing it the way the
+   interviewers will want to see the solution. 
+
+** Implementation
+
+This project should be tested using Doctest. Make sure your Makefile
+has the following targets:
+
+1. main -- builds an executable named main to "run" the program.
+2. tests -- build the test executable named "tests" - will perform the
+   doctests.
+3. clean - removes the object files.
+   
+You should also make sensible decisions with respect to error / bounds
+conditions and the like. Base you decisions on what we wrote and
+discussed in class as well as your own opinions.
+
+As with your labs last semesters, there should be no keyboard input.
+
+Make sure to use Zulip to discuss any of this and to reach out if you
+need any assistance. 
+
+
