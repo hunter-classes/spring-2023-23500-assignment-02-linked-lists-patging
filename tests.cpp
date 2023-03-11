@@ -33,6 +33,19 @@ TEST_CASE("Getting and setting within the list") {
   
 }
 
+TEST_CASE("Contains") {
+    OList l;
+    l.insert("a");
+    l.insert("b");
+
+    CHECK(l.contains("a"));
+    CHECK(l.contains("b"));
+    CHECK(! l.contains("aa"));
+    CHECK(! l.contains("bb"));
+
+}
+
+
 TEST_CASE("Reverse") {
     OList l;
     l.insert("a");
