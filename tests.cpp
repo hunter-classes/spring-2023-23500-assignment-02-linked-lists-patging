@@ -88,5 +88,5 @@ TEST_CASE("Delete") {
   l->insert("a");
 
   delete l;
-  // not sure of a good delete tests
+
 }

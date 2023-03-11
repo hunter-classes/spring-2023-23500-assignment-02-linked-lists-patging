@@ -28,8 +28,7 @@ OList::~OList() {
     head = head->getNext();
     delete trailer;
   }
-  head = new Node;
-
+  delete head;
   this->len = 0;
 }
 
